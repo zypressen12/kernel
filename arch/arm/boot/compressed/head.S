@@ -232,6 +232,11 @@ start:
  * cpsr 을 읽어서 서 알9에 읽음. 일반적으로 무브를 쓰는데 씨피에스알은 특이하게 엠알에스로 처리함....
  * 책에 그렇게 나와 있다고 함. 스페셜 레지스터는 별도 명령어로 처리함....
  * 그럼 일반 유저는 cpsr을 못 읽는데 왜 mov랑 구분해서 명령어가 있을까??? 숙제
+ * cpsr은 arm 상태레지스터로 current arm 상태를 읽어들이는 것입니다. co-processor 명령을 그래서 여기에 사용하고요.
+ * r0~r12의 general purpose 레지스터는 mov를 사용해서 입력하지면 상태레지스터는 하드웨어적으로 따로 설계되어 있어 
+ * coprocessor 명령어를 사용한다고 생각하시면 편합니다.
+ * http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0497a/CHDBIBGJ.html
+ 
  * 데이터/레지스터 처리 명령어가 구분되어 있다는 의견이 있었음.
  */
 		mrs	r9, cpsr
